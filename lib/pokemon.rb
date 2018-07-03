@@ -10,6 +10,6 @@ class Pokemon
     new_poke = Pokemon.new(name: name, type: type, db: db)
     new_poke.id = @all.length
     @all << new_poke
-    new_poke
+    @all
   end
 end
