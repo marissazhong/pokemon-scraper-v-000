@@ -8,7 +8,7 @@ class Pokemon
   end
   def self.save(name, type, db)
     new_poke = Pokemon.new(name: name, type: type, db: db)
-    new_poke.id = @all.length
+    new_poke.id = @all.length+1
     @all << new_poke
     @all
   end
