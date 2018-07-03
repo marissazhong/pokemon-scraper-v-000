@@ -7,7 +7,7 @@ class Pokemon
     @db = db
     @id = id
   end
-  def save(name, type, db)
+  def self.save(name, type, db)
     new_poke = Pokemon.new(name: name, type: type, db: db)
     @all << new_poke
   end
