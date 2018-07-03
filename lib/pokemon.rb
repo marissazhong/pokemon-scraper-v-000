@@ -1,5 +1,5 @@
 class Pokemon
-  attr_accessor :name, :type, :db, :id
+  attr_accessor :name, :type, :db, :id, :hp
   @all = []
   def initialize(name:,type:,db:, id:)
     @name, @type, @db, @id = name, type, db, id
@@ -11,4 +11,5 @@ class Pokemon
     found = db.execute("SELECT * FROM pokemon WHERE id=?;",id2).flatten
     Pokemon.new(id:found[0],name:found[1],type:found[2],db:db)
   end
+  def alter_hp()
 end
