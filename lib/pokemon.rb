@@ -5,9 +5,6 @@ class Pokemon
     @name, @type, @db, @id = name, type, db, id
   end
   def self.save(name, type, db)
-    new_poke = Pokemon.new(name: name, type: type, db: db)
-    new_poke.id = @all.length+1
-    @all << new_poke
-    @all
+    db.execute(INSERT INTO pokemon (name, type) values (name, type))
   end
 end
